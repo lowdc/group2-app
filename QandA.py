@@ -13,17 +13,23 @@ for message in st.session_state.chat_history:
 
 bedrockClient = boto3.client('bedrock-agent-runtime', 'us-east-1')
 
-def getAnswers(questions):
-    knowledgeBaseResponse  = bedrockClient.retrieve_and_generate(
-        input={'text': questions},
+AgentsforBedrockRuntime.Client.retrieve_and_generate(**kwargs)
+
+def retrieveAndGenerate(input, kbId, modelArn=None):
+    response = boto_runtime.retrieve_and_generate(
+        input={
+            'text': input
+        },
         retrieveAndGenerateConfiguration={
             'knowledgeBaseConfiguration': {
-                'knowledgeBaseId': 'FFLMW5Y2F8',
-                'modelArn': 'anthropic.claude-3-5-sonnet-20241022-v2:0'
+                'knowledgeBaseId': FFLMW5Y2F8,
+                'modelArn': anthropic.claude-3-5-sonnet-20241022-v2:0
             },
             'type': 'KNOWLEDGE_BASE'
-        })
-    return knowledgeBaseResponse
+        }
+    )
+    
+    return response
 
 
 questions = st.chat_input('Enter you questions here...')
