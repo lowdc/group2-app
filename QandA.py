@@ -17,7 +17,7 @@ bedrockClient = boto3.client('bedrock-agent-runtime', 'us-east-1')
 def retrieveAndGenerate(input, kbId, modelArn=None):
     response = boto_runtime.retrieve_and_generate(
         input={
-            'text': input
+            'text': string
         },
         retrieveAndGenerateConfiguration={
             'knowledgeBaseConfiguration': {
@@ -30,6 +30,8 @@ def retrieveAndGenerate(input, kbId, modelArn=None):
     
     return response
 
+
+  
 
 input = st.chat_input('Enter you input here...')
 if input:
