@@ -14,7 +14,7 @@ for message in st.session_state.chat_history:
 bedrockClient = boto3.client('bedrock-agent-runtime', 'us-east-1')
 
 
-def retrieveAndGenerate(input, kbId, modelArn=None):
+def retrieveAndGenerate(input, knowledgeBaseId, modelArn=None):
     response = boto_runtime.retrieve_and_generate(
         input={
             'text': input
