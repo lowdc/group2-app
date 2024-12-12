@@ -1,4 +1,5 @@
 streamlit
+boto
 pandas
 plotly
 yfinance
