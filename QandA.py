@@ -13,7 +13,6 @@ for message in st.session_state.chat_history:
 
 bedrockClient = boto3.client('bedrock-agent-runtime', 'us-east-1')
 
-AgentsforBedrockRuntime.Client.retrieve_and_generate(**kwargs)
 
 def retrieveAndGenerate(input, kbId, modelArn=None):
     response = boto_runtime.retrieve_and_generate(
