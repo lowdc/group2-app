@@ -10,7 +10,7 @@ def lambda_handler(event, context):
     print('Inside Lambda Handler')
     print('event: ', event)
     dataSourceId = os.environ['DATASOURCEID']
-    knowledgeBaseId = os.environ['KNOWLEDGEBASEID']
+    knowledgeBaseId = os.environ['RY3R5I0PSP']
     
     print('knowledgeBaseId: ', knowledgeBaseId)
     print('dataSourceId: ', dataSourceId)
