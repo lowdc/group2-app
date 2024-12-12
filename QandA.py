@@ -31,13 +31,13 @@ def retrieveAndGenerate(input, kbId, modelArn=None):
     return response
 
 
-questions = st.chat_input('Enter you questions here...')
-if questions:
+input = st.chat_input('Enter you input here...')
+if input:
     with st.chat_message('user'):
-        st.markdown(questions)
-    st.session_state.chat_history.append({"role":'user', "text":questions})
+        st.markdown(input)
+    st.session_state.chat_history.append({"role":'user', "text":input})
 
-    response = retrieveAndGenerate(questions)
+    response = retrieveAndGenerate(input)
     # st.write(response)
     answer = response['output']['text']
 
