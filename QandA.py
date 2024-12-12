@@ -23,7 +23,7 @@ def retrieveAndGenerate(input, kbId, modelArn=None):
         retrieveAndGenerateConfiguration={
             'knowledgeBaseConfiguration': {
                 'knowledgeBaseId': FFLMW5Y2F8,
-                'modelArn': anthropic.claude-3-5-sonnet-20241022-v2:0
+                'modelArn': anthropic.claude-3-5-sonnet-20241022-v2
             },
             'type': 'KNOWLEDGE_BASE'
         }
