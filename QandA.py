@@ -25,7 +25,9 @@ def retrieveAndGenerate(input, kbId, modelArn=None):
                 'modelArn': 'anthropic.claude-3-5-sonnet-20241022-v2'
             },
             'type': 'KNOWLEDGE_BASE'
-        }
+        },
+            'knowledgeBaseId': 'string',
+                    'modelArn': 'string',}
     )
     
     return response
