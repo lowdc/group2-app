@@ -14,15 +14,15 @@ for message in st.session_state.chat_history:
 bedrockClient = boto3.client('bedrock-agent-runtime', 'us-east-1')
 
 
-def retrieveAndGenerate(input, knowledgeBaseId, modelArn=None):
+def retrieveAndGenerate(input, kbId, modelArn=None):
     response = boto_runtime.retrieve_and_generate(
         input={
             'text': input
         },
         retrieveAndGenerateConfiguration={
             'knowledgeBaseConfiguration': {
-                'knowledgeBaseId': FFLMW5Y2F8,
-                'modelArn': anthropic.claude-3-5-sonnet-20241022-v2
+                'knowledgeBaseId': 'FFLMW5Y2F8',
+                'modelArn': 'anthropic.claude-3-5-sonnet-20241022-v2'
             },
             'type': 'KNOWLEDGE_BASE'
         }
