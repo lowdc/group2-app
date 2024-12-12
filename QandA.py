@@ -26,8 +26,7 @@ def retrieveAndGenerate(input, kbId, modelArn=None):
             },
             'type': 'KNOWLEDGE_BASE'
         },
-            'knowledgeBaseId': 'string',
-                    'modelArn': 'string',
+           
     )
     
     return response
