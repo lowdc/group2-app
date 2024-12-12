@@ -37,7 +37,7 @@ if questions:
         st.markdown(questions)
     st.session_state.chat_history.append({"role":'user', "text":questions})
 
-    response = getAnswers(questions)
+    response = retrieveAndGenerate(questions)
     # st.write(response)
     answer = response['output']['text']
 
